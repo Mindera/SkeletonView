@@ -48,7 +48,7 @@ extension CALayer {
         (0..<numberOfSublayers).forEach { index in
             var width = bounds.width
             if index == numberOfSublayers - 1 && numberOfSublayers != 1 {
-                width = width * CGFloat(lastLineFillPercent) / 100;
+                width *= CGFloat(lastLineFillPercent) / 100;
             }
 
             if let layer = layerBuilder

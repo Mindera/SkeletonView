@@ -9,9 +9,11 @@ enum SkeletonEnvironmentKey: String {
 }
 
 extension Dictionary {
+    // swiftlint:disable force_cast
     subscript (_ key: SkeletonEnvironmentKey) -> Value? {
         return self[key.rawValue as! Key]
     }
+    // swiftlint:enable force_cast
 }
 
 func printSkeletonHierarchy(in view: UIView) {
@@ -29,7 +31,7 @@ extension UIView {
     public var skeletonDescription: String {
         var description = "<\(type(of: self)): \(Unmanaged.passUnretained(self).toOpaque())"
         let subSkeletons = subviewsSkeletonables
-        if subSkeletons.count != 0 {
+        if !subSkeletons.isEmpty {
             description += " | (\(subSkeletons.count)) subSkeletons"
         }
         if isSkeletonable {

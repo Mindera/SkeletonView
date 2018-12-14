@@ -5,6 +5,7 @@ import UIKit
 public protocol Appearance {
     var tintColor: UIColor { get set }
     var gradient: SkeletonGradient { get set }
+    var lineFillPercent: Int { get set }
     var multilineHeight: CGFloat { get set }
     var multilineSpacing: CGFloat { get set }
     var multilineLastLineFillPercent: Int { get set }
@@ -23,6 +24,8 @@ class SkeletonViewAppearance: Appearance {
     var tintColor: UIColor = .clouds
 
     var gradient: SkeletonGradient = SkeletonGradient(baseColor: .clouds)
+
+    var lineFillPercent: Int = 100
 
     var multilineHeight: CGFloat = 15
 

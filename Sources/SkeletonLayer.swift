@@ -47,10 +47,12 @@ struct SkeletonLayer {
     }
     
     init(withType type: SkeletonType, usingColors colors: [UIColor], andSkeletonHolder holder: UIView) {
+        let bounds = holder.maxBoundsEstimated
+        let yAnchor = bounds.minY / ((-bounds.minY * 2) + bounds.height)
         self.holder = holder
         self.maskLayer = type.layer
-        self.maskLayer.anchorPoint = .zero
-        self.maskLayer.bounds = holder.maxBoundsEstimated
+        self.maskLayer.anchorPoint = CGPoint(x: 0.0, y: yAnchor)
+        self.maskLayer.bounds = bounds
         addMultilinesIfNeeded()
         self.maskLayer.tint(withColors: colors)
     }
@@ -60,7 +62,8 @@ struct SkeletonLayer {
     }
     
     func addMultilinesIfNeeded() {
-        guard let multiLineView = holder as? ContainsMultilineText else { return }
+        guard let multiLineView = holder as? ContainsMultilineText,
+              multiLineView.numLines != 1 else { return }
         maskLayer.addMultilinesLayers(lines: multiLineView.numLines, type: type, lastLineFillPercent: multiLineView.lastLineFillingPercent, multilineCornerRadius: multiLineView.multilineCornerRadius)
     }
 }

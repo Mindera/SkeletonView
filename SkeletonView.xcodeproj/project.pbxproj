@@ -38,6 +38,12 @@
 		42ABD07B210B54E200BEEFF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABD073210B54E100BEEFF4 /* ViewController.swift */; };
 		42ABD07C210B54E200BEEFF4 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 42ABD074210B54E100BEEFF4 /* Base.lproj */; };
 		42ABD07F210B54E200BEEFF4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ABD077210B54E200BEEFF4 /* CollectionViewCell.swift */; };
+		82FDB4F439841DD111A74D52 /* ContainsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDB77A459B0A0EBFCD7018 /* ContainsText.swift */; };
+		82FDB598A13E247FB453958B /* UILabel+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDB4F83367B83C9644F374 /* UILabel+IBInspectable.swift */; };
+		82FDB5E7E8DF6EB2A67D6598 /* ContainsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDB77A459B0A0EBFCD7018 /* ContainsText.swift */; };
+		82FDB6A26C28D0B5F38610E2 /* UITextView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDB80DB3F16F870594169B /* UITextView+IBInspectable.swift */; };
+		82FDBC3711F95B492677B470 /* UITextView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDB80DB3F16F870594169B /* UITextView+IBInspectable.swift */; };
+		82FDBF30A2957D7B2064CB21 /* UILabel+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDB4F83367B83C9644F374 /* UILabel+IBInspectable.swift */; };
 		872D5A5621C177E20037D763 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872D5A5521C177E20037D763 /* UIView+Extension.swift */; };
 		872D5A5721C177E20037D763 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872D5A5521C177E20037D763 /* UIView+Extension.swift */; };
 		872D5A5C21C24EDD0037D763 /* UILabel+Multiline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872D5A5B21C24EDD0037D763 /* UILabel+Multiline.swift */; };
@@ -156,6 +162,9 @@
 		42ABD076210B54E200BEEFF4 /* SkeletonViewExampleCollectionview-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SkeletonViewExampleCollectionview-Info.plist"; sourceTree = "<group>"; };
 		42ABD077210B54E200BEEFF4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82FDB4F83367B83C9644F374 /* UILabel+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+IBInspectable.swift"; sourceTree = "<group>"; };
+		82FDB77A459B0A0EBFCD7018 /* ContainsText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsText.swift; sourceTree = "<group>"; };
+		82FDB80DB3F16F870594169B /* UITextView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+IBInspectable.swift"; sourceTree = "<group>"; };
 		872D5A5521C177E20037D763 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		872D5A5B21C24EDD0037D763 /* UILabel+Multiline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Multiline.swift"; sourceTree = "<group>"; };
 		872D5A5E21C24F8E0037D763 /* UITextView+Multiline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Multiline.swift"; sourceTree = "<group>"; };
@@ -268,6 +277,16 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		82FDB9AD8FEBB024E7F411FF /* Singleline */ = {
+			isa = PBXGroup;
+			children = (
+				82FDB77A459B0A0EBFCD7018 /* ContainsText.swift */,
+				82FDB4F83367B83C9644F374 /* UILabel+IBInspectable.swift */,
+				82FDB80DB3F16F870594169B /* UITextView+IBInspectable.swift */,
+			);
+			path = Singleline;
+			sourceTree = "<group>";
+		};
 		872D5A5821C17D850037D763 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +366,7 @@
 				F5F899E81FAB9D2B002E8FDA /* SkeletonLayer.swift */,
 				8933C7841EB5B820000D00A4 /* SkeletonView.swift */,
 				F5D3FB0A209DCAA300003FCF /* SubviewsSkeletonables.swift */,
+				82FDB9AD8FEBB024E7F411FF /* Singleline */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -683,6 +703,9 @@
 				17DD0E1D207FB32100C56334 /* ContainsMultilineText.swift in Sources */,
 				17DD0E0F207FB28C00C56334 /* CALayer+Extensions.swift in Sources */,
 				17DD0E16207FB28F00C56334 /* SkeletonGradient.swift in Sources */,
+				82FDB5E7E8DF6EB2A67D6598 /* ContainsText.swift in Sources */,
+				82FDBC3711F95B492677B470 /* UITextView+IBInspectable.swift in Sources */,
+				82FDBF30A2957D7B2064CB21 /* UILabel+IBInspectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +759,9 @@
 				F51DF871206E91B300D23301 /* SkeletonReusableCell.swift in Sources */,
 				F51DF879206E9F5500D23301 /* SkeletonCollectionDelegate.swift in Sources */,
 				F51DE1091FBF70A70037919A /* SkeletonAnimationBuilder.swift in Sources */,
+				82FDB4F439841DD111A74D52 /* ContainsText.swift in Sources */,
+				82FDB598A13E247FB453958B /* UILabel+IBInspectable.swift in Sources */,
+				82FDB6A26C28D0B5F38610E2 /* UITextView+IBInspectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
